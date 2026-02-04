@@ -1,0 +1,240 @@
+{
+  "id": "99-neovim-plugin-onboarding",
+  "title": "99 Neovim Plugin - AI Agent Tour",
+  "description": "Explore the AI agent that Neovim deserves - learn the architecture, custom rules, and tree-sitter integration",
+  "version": "1.0.0",
+  "audience": "Neovim Plugin Developers",
+  "prerequisites": [
+    "Basic understanding of Lua and Neovim configuration",
+    "Familiarity with tree-sitter concepts"
+  ],
+  "steps": [
+    {
+      "id": "step-1-overview",
+      "title": "Project Overview",
+      "description": "Welcome to 99! This is an AI agent plugin for Neovim that provides intelligent code completion and refactoring. The tour will guide you through the core architecture.",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "explore",
+          "description": "Explore the entire project structure to get familiar with the layout"
+        }
+      ]
+    },
+    {
+      "id": "step-2-core-lua",
+      "title": "Core Plugin Architecture",
+      "description": "The main plugin logic lives in the lua/99 directory. This contains the setup, operations, providers, and editor integrations.",
+      "estimatedTime": 120,
+      "focusDirectory": "lua/99",
+      "highlightLayers": [
+        {
+          "id": "core-files",
+          "name": "Core Plugin Files",
+          "color": "#3b82f6",
+          "items": [
+            {
+              "path": "lua/99/init.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/ops/init.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/providers.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/editor/init.lua",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.8,
+          "renderStrategy": "border"
+        }
+      ],
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Click on init.lua to see the main plugin entry point",
+          "target": "lua/99/init.lua"
+        }
+      ]
+    },
+    {
+      "id": "step-3-operations",
+      "title": "AI Operations System",
+      "description": "The ops/ directory contains the core AI operations like fill-in-function, visual selection, and request management.",
+      "estimatedTime": 120,
+      "focusDirectory": "lua/99/ops",
+      "highlightLayers": [
+        {
+          "id": "ai-operations",
+          "name": "AI Operations",
+          "color": "#10b981",
+          "items": [
+            {
+              "path": "lua/99/ops/fill-in-function.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/ops/implement-fn.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/ops/marks.lua",
+              "type": "file"
+            },
+            {
+              "path": "lua/99/ops/request_status.lua",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.8,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "step-4-treesitter-queries",
+      "title": "Tree-sitter Language Support",
+      "description": "Multi-language support through tree-sitter queries. Each language has custom queries for functions, imports, and scope detection.",
+      "estimatedTime": 120,
+      "focusDirectory": "queries",
+      "highlightLayers": [
+        {
+          "id": "language-queries",
+          "name": "Language Queries",
+          "color": "#f59e0b",
+          "items": [
+            {
+              "path": "queries",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "interactiveActions": [
+        {
+          "type": "hover-directory",
+          "description": "Hover over language directories to see supported languages",
+          "target": "queries"
+        }
+      ]
+    },
+    {
+      "id": "step-5-custom-rules",
+      "title": "Custom Rules System",
+      "description": "The scratch/custom_rules/ directory contains skill-based rules that define custom behaviors for different contexts and languages.",
+      "estimatedTime": 90,
+      "focusDirectory": "scratch/custom_rules",
+      "highlightLayers": [
+        {
+          "id": "custom-skills",
+          "name": "Custom Skills",
+          "color": "#8b5cf6",
+          "items": [
+            {
+              "path": "scratch/custom_rules",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "step-6-testing",
+      "title": "Test Suite",
+      "description": "Comprehensive test coverage for all operations and providers. The tests use plenary.nvim for Neovim testing.",
+      "estimatedTime": 90,
+      "focusDirectory": "lua/99/test",
+      "highlightLayers": [
+        {
+          "id": "test-files",
+          "name": "Test Files",
+          "color": "#ef4444",
+          "items": [
+            {
+              "path": "lua/99/test",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "step-7-config-files",
+      "title": "Project Configuration",
+      "description": "Essential configuration files that define the project structure, linting rules, and build processes.",
+      "estimatedTime": 60,
+      "highlightFiles": [
+        "README.md",
+        "AGENTS.md",
+        "Makefile",
+        ".luarc.json",
+        ".stylua.toml",
+        ".luacheckrc"
+      ],
+      "highlightLayers": [
+        {
+          "id": "config-files",
+          "name": "Configuration",
+          "color": "#6b7280",
+          "items": [
+            {
+              "path": "README.md",
+              "type": "file"
+            },
+            {
+              "path": "AGENTS.md",
+              "type": "file"
+            },
+            {
+              "path": "Makefile",
+              "type": "file"
+            },
+            {
+              "path": ".luarc.json",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.8,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "step-8-next-steps",
+      "title": "Next Steps & Resources",
+      "description": "You've completed the tour! Key areas to explore next: the setup() function in init.lua, custom rules creation, and adding new language queries. Check the README.md for usage examples.",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Review the README.md for usage examples",
+          "target": "README.md"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "File City Tours Skill",
+    "createdAt": "2026-02-04T16:30:00.000Z",
+    "tags": [
+      "neovim",
+      "lua",
+      "ai-agent",
+      "plugin",
+      "treesitter"
+    ]
+  }
+}
