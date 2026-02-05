@@ -175,6 +175,7 @@
       "title": "Project Configuration",
       "description": "Essential configuration files that define the project structure, linting rules, and build processes.",
       "estimatedTime": 60,
+      "focusDirectory": "",
       "highlightFiles": [
         "README.md",
         "AGENTS.md",
